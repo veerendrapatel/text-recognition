@@ -3,7 +3,7 @@ import M from 'materialize-css';
 
 // Just a simple component to hold results
 const Holder = ({ text, altText }) => {
-  
+
   if (text !== null)
     return (
       <div className="card horizontal">
@@ -19,7 +19,7 @@ const Holder = ({ text, altText }) => {
                 range.selectNodeContents(evt.target.parentNode.parentNode.parentNode.children[0]);
                 select.removeAllRanges(); select.addRange(range);
                 document.execCommand("copy"); document.getSelection().removeAllRanges();
-                M.toast({html: 'Text Copied Successfully!'})
+                M.toast({ html: 'Text Copied Successfully!' })
               }}>content_copy</i>
             </div>
           </div>
@@ -35,7 +35,7 @@ const Holder = ({ text, altText }) => {
         "left": "10%",
         "right": "10%"
       }}>
-      <br/><br/>
+      <br /><br />
       {altText}
     </p>);
 

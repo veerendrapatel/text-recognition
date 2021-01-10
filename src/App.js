@@ -30,19 +30,19 @@ class App extends React.Component {
     const img = document.getElementById('imageInput').files[0];
     const url = URL.createObjectURL(img);
 
-    M.toast({html: 'Execution Started! This may take a while'});
+    M.toast({ html: 'Execution Started! This may take a while' });
 
     // Check Completion Status in console
     await Tesseract.recognize(url, 'eng',
-        { logger: m => console.log(m) }
+      { logger: m => console.log(m) }
     )
-    .then(({ data: { text } }) => {
-      
-      // Update App State Accordingly
-      this.setState({ image: text });
-      M.toast({html: 'Execution Successful'})
+      .then(({ data: { text } }) => {
 
-    });
+        // Update App State Accordingly
+        this.setState({ image: text });
+        M.toast({ html: 'Execution Successful' })
+
+      });
 
   }
 
@@ -57,7 +57,7 @@ class App extends React.Component {
         </nav>
 
         <div id="image">
-          <br/>
+          <br />
           <Holder text={this.state.image} altText={"Tap the shutter to Get Started!"} />
 
           <input type="file" accept="image/*" id="imageInput" capture style={{
