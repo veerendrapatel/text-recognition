@@ -52,7 +52,7 @@ class App extends React.Component {
 
         <nav className="nav-extended purple darken-4">
           <div className="nav-wrapper">
-            <span className="brand-logo center">Text Recognition</span>
+            <span className="brand-logo center">Receipt Scanner</span>
           </div>
         </nav>
 
